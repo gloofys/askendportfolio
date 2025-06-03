@@ -1,16 +1,20 @@
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import "./styles/main.scss";
+import WhatSetsMeApart from "./components/WhatSetsMeApart.jsx";
 
 
-import './App.css'
+const App = () => {
+    return (
+        <div className="app-layout">
+            {/* Optional Nav */}
+            <main>
+                {/*<Hero />*/}
+                <WhatSetsMeApart />
+            </main>
+            <Footer />
+        </div>
+    );
+};
 
-function App() {
-
-  return (
-    <>
-      <div>
-AAA
-      </div>
-    </>
-  )
-}
-
-export default App
+export default App;

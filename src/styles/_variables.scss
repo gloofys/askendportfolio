@@ -1,5 +1,10 @@
 // src/styles/_variables.scss
-$primary-color: #273348;
-$accent-color: #4B70F9;
-$background-color: #f9f9f9;
-$text-color: #333;
+:root {
+  --primary-color: #4b31b4;
+  --secondary-color: #e1dfff;
+  --tertiary-color: #bfbeff;
+  --grey-color: #f3f3f3;
+  --white-color: #ffffff;
+  --salomie-color: #fedf8e;
+  --midnight-color: #181825;
+}

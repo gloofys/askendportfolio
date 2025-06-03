@@ -1,0 +1,79 @@
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Instrument sans", sans-serif;
+  color: var(--midnight-color);
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 10.8rem;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  font-family: "GT-Alpina", serif;
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 6.4rem;
+    line-height: 1.1;
+  }
+}
+
+h2 {
+  font-size: 7.6rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-family: "GT-Alpina", serif;
+}
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 4.8rem;
+    line-height: 0.95;
+  }
+}
+
+h3 {
+  font-size: 6.4rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-family: "GT-Alpina", serif;
+}
+
+h4 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-family: "Instrument sans", sans-serif;
+}
+@media (max-width: 1024px) {
+  h4 {
+    line-height: 1.1;
+  }
+}
+
+p {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--midnight-color);
+  text-decoration: none;
+}
+
+h1.primary, h2.primary, h3.primary, h4.primary, h5.primary {
+  color: var(--primary-color);
+}

@@ -1,0 +1,104 @@
+// src/styles/components/WhatSetsMeApart.scss
+
+.what-sets-me-apart {
+  background: var(--white-color);
+  padding: 9.6rem 6.4rem;
+  border-top-left-radius: 6.4rem;
+  border-top-right-radius: 6.4rem;
+  font-family: "Instrument Sans", sans-serif;
+  color: var(--midnight-color);
+  -webkit-font-smoothing: antialiased;
+
+  .section-title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    margin: 0 0 9.6rem 0;
+    padding: 0;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--primary-color);
+  }
+
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6.4rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s ease-in-out;
+
+      &__image {
+        width: 100%;
+        border-radius: 3.2rem;
+        overflow: hidden; // Ensures the zoomed image is clipped
+        img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        img:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      &__title {
+        margin: 2rem 0 1rem;
+        font-weight: 700;
+      }
+
+      &__description {
+        color: var(--midnight-color);
+      }
+    }
+  }
+
+  .cta-banner {
+    position: relative;
+    background: url("/assets/images/banner.jpg") center/cover no-repeat;
+    border-radius: 3.2rem;
+    padding: 6.4rem;
+    color: var(--white-color);
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+
+      h2 {
+        font-family: 'Spectral', serif;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 1.6rem;
+      }
+
+      .cta-link a {
+        font-weight: bold;
+        color: var(--salomie-color);
+        text-decoration: underline;
+      }
+    }
+  }
+}
