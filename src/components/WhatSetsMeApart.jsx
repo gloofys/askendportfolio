@@ -39,18 +39,6 @@ const WhatSetsMeApart = () => {
                 ))}
             </div>
 
-            <div className="cta-banner">
-                <div className="overlay" />
-                <div className="content">
-                    <h2>We live in an era of constant, rapid change.</h2>
-                    <p>
-                        To succeed in the future, you need to master your tools, think user-first, and deliver securely and scalably.
-                    </p>
-                    <p className="cta-link">
-                        <a href="#contact">Contact me</a> to discuss how I can help you future-proof your team.
-                    </p>
-                </div>
-            </div>
         </section>
     );
 };
