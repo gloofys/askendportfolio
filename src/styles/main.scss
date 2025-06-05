@@ -3,6 +3,12 @@
 @use "./typography" as*;
 @use "./buttons" as*;
 @use "./components/MyWork";
+@use "./components/ContactCallout";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
 .hero-banner {
   position: relative;

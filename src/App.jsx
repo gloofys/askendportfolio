@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import "./styles/main.scss";
 import WhatSetsMeApart from "./components/WhatSetsMeApart.jsx";
 import MyWork from "./components/MyWork.jsx";
+import ContactCallout from "./components/ContactCallout.jsx";
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
                 {/*<Hero />*/}
                 <WhatSetsMeApart/>
                 <MyWork/>
+                <ContactCallout/>
             </main>
             <Footer/>
         </div>

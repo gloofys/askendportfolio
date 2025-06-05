@@ -1,0 +1,74 @@
+.contact-callout {
+  position: relative;
+  background-image: url("/workdesk-back.png");
+  background-size: cover;
+  background-position: center;
+  height:100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  min-height: 80vh;
+
+  .contact-callout__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); // or use var(--midnight-color) with opacity
+    z-index: 0;
+  }
+
+  .contact-callout__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    grid-column-start: 4;
+    grid-column-end: span 6;
+    padding: 24rem 0;
+
+    h2 {
+      font-size: 6.4rem;
+      font-family: GT-Alpina, serif;
+      color: var(--salomie-color);
+      line-height: 1.1;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-size: 1.75rem;
+      color: var(--white-color);
+      margin: 6.4rem;
+      line-height: 1.4;
+    }
+
+  }
+  .contact-callout__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    .btn {
+      min-width: 16rem;
+      text-align: center;
+    }
+  }
+  .btn--icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    .icon {
+      flex-shrink: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-callout__content h2 {
+      font-size: 4.2rem;
+    }
+
+    .contact-callout__content p {
+      font-size: 2rem;
+    }
+  }
+}

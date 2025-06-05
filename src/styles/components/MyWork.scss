@@ -6,7 +6,7 @@
   .my-work__title {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
 
     h2 {
       grid-column-start: 1;
@@ -83,12 +83,15 @@
 
       &__image-container {
         overflow: hidden;
+        border-radius: 3.2rem;
 
         img {
           width: 100%;
           height: auto;
-          border-radius: 3.2rem;
+
           transition: transform 0.5s ease-in-out;
+          background-color: #bfbeff;
+          object-fit: cover;
 
           &:hover {
             transform: scale(1.05);
@@ -97,7 +100,7 @@
       }
 
       &__sub-title {
-        color: var(--salomie-color);
+        color: var(--tertiary-color);
         font-size: 1.6rem;
         margin: 2.4rem 0 1rem 0;
         text-transform: uppercase;
@@ -116,6 +119,89 @@
         font-size: 1.8rem;
         line-height: 1.5;
         margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+
+}
+.courses-section {
+  background: var(--courses-color);
+  padding: 9.6rem 6.4rem;
+
+  .courses-header {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    h2 {
+      grid-column-start: 1;
+      grid-column-end: span 4;
+      color: var(--salomie-color);
+      font-size: 6.4rem;
+      font-family: GT-Alpina, serif;
+      line-height: 1.1;
+      margin-bottom: 9.6rem;
+    }
+
+    p {
+      grid-column-start: 5;
+      grid-column-end: span 7;
+      color: var(--white-color);
+      font-size: 3.2rem;
+      max-width: 70ch;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+    .highlight-text {
+      color: var(--salomie-color);
+    }
+  }
+
+  .course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-top: 6.4rem;
+
+    .course-card {
+      background: var(--grey-color);
+      border-radius: 3.2rem;
+      padding: 3.2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 2.4rem;
+        margin: 2rem 0 1rem;
+        color: var(--midnight-color);
+      }
+
+      .course-card__logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        img {
+          max-width: 80%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      .course-card__link {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-top: auto;
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--salomie-color);
+        }
       }
     }
   }
