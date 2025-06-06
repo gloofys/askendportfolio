@@ -6,10 +6,18 @@ const Footer = () => {
         <footer className="footer grid">
             {/* Column 1: Logo */}
             <div className="footer__brand">
-                <img src="/AskendFredLogo.png" alt="Fred Brosman Logo" />
+                <img src="/FLogo.png" alt="Fred Brosman Logo" />
             </div>
 
-            {/* Column 2: Navigation */}
+            <div className="footer__note">
+                <h4 className="footer__label">About This Site</h4>
+                <p>
+                    This is a <strong>demo portfolio</strong> created by Fred Brosman, styled after Askend.com for
+                    personal learning and job-seeking purposes.
+                </p>
+            </div>
+
+
             <div className="footer__nav">
                 <h4 className="footer__label">Navigation</h4>
                 <ul>
@@ -20,7 +28,6 @@ const Footer = () => {
                 </ul>
             </div>
 
-            {/* Column 3: Contact & Social */}
             <div className="footer__contact">
                 <h4 className="footer__label">Contact</h4>
                 <p>Tallinn, Estonia</p>
