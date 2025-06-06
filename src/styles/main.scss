@@ -4,38 +4,10 @@
 @use "./buttons" as*;
 @use "./components/MyWork";
 @use "./components/ContactCallout";
+@use "./components/Hero";
 
 html, body {
   height: 100%;
   margin: 0;
 }
 
-.hero-banner {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-
-  &__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
-
-  &__content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    padding-top: 20vh;
-  }
-}

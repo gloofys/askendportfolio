@@ -9,9 +9,8 @@ import ContactCallout from "./components/ContactCallout.jsx";
 const App = () => {
     return (
         <div className="app-layout">
-            {/* Optional Nav */}
             <main>
-                {/*<Hero />*/}
+                <Hero />
                 <WhatSetsMeApart/>
                 <MyWork/>
                 <ContactCallout/>

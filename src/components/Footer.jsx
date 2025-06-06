@@ -6,14 +6,13 @@ const Footer = () => {
         <footer className="footer grid">
             {/* Column 1: Logo */}
             <div className="footer__brand">
-                <img src="/FLogo.png" alt="Fred Brosman Logo" />
+                <img src="/FLogosmall.png" alt="Fred Brosman Logo" />
             </div>
 
             <div className="footer__note">
                 <h4 className="footer__label">About This Site</h4>
                 <p>
-                    This is a <strong>demo portfolio</strong> created by Fred Brosman, styled after Askend.com for
-                    personal learning and job-seeking purposes.
+                    This is a <strong>demo portfolio</strong> created by Fred Brosman, styled after <a href="https://askend.com" target="_blank" rel="noreferrer">Askend.com</a> for personal learning and job-seeking purposes.
                 </p>
             </div>
 
@@ -30,18 +29,20 @@ const Footer = () => {
 
             <div className="footer__contact">
                 <h4 className="footer__label">Contact</h4>
-                <p>Tallinn, Estonia</p>
-                <p>
-                    fred.brosman06@gmail.com
-                </p>
-                <div className="footer__socials">
-                    <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer">
-                        <i className="devicon-linkedin-plain"></i>
-                    </a>
-                    <a href="https://github.com/gloofys" target="_blank" rel="noreferrer">
-                        <i className="devicon-github-original"></i>
-                    </a>
-                </div>
+                <ul className="footer__contact-list">
+                    <li>Tallinn, Estonia</li>
+                    <li>
+                        <a href="mailto:fred.brosman06@gmail.com">fred.brosman06@gmail.com</a>
+                    </li>
+                    <li className="footer__socials">
+                        <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer">
+                            <i className="devicon-linkedin-plain"></i>
+                        </a>
+                        <a href="https://github.com/gloofys" target="_blank" rel="noreferrer">
+                            <i className="devicon-github-original"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </footer>
     );

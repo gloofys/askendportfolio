@@ -1,19 +1,23 @@
 const Hero = () => {
     return (
-        <section className="hero-banner">
-            <div className="hero-banner__overlay" />
-            <iframe
-                className="hero-banner__video"
-                src="https://player.vimeo.com/video/947359152?background=1&autoplay=1&loop=1&muted=1"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-            ></iframe>
-            <div className="hero-banner__content">
-                <h1>Fred Brosman</h1>
-                <p>Portfolio Demo Inspired by Askend</p>
+        <section className="hero">
+            <div className="hero__overlay"/>
+            <video
+                className="hero__video"
+                src="/Askendvideoloop.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+            />
+            <div className="hero__content">
+                <h1>Ain’t no mountain high enough</h1>
+                <h4>
+                    Building secure digital services that hold up to the challenges the future might bring.
+                </h4>
             </div>
         </section>
+
     );
 };
 export default Hero;

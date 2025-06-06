@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+  height: 56.25vw;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    transform: translate(-50%,);
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    color: var(--salomie-color);
+    text-align: center;
+    padding: 6.4rem;
+  }
+}
