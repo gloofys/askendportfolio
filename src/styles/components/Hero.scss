@@ -11,7 +11,7 @@
     left: 50%;
     width: 100vw;
     height: 56.25vw;
-    transform: translate(-50%,);
+    transform: translateX(-50%);
     z-index: 0;
     object-fit: cover;
   }
@@ -24,10 +24,140 @@
   }
 
   &__content {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    color: var(--salomie-color);
-    text-align: center;
-    padding: 6.4rem;
+    color: var(--white-color);
+    padding: 0 6.4rem;
+    bottom: 12rem;
+    display: grid;
+  }
+  &__text {
+    max-width: 60ch;
+
+    h1 {
+      font-size: 6.4rem;
+      color: var(--salomie-color);
+      font-family: GT-Alpina, serif;
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 2.8rem;
+      color: var(--white-color);
+      font-weight: 400;
+    }
+  }
+}
+
+.altimeter {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 6;
+  grid-column-end: span 7;
+  margin-top: 8rem;
+
+  .altimeter-main-container {
+    align-items: center;
+    display: flex;
+    height: 80rem;
+    justify-content: center;
+    position: relative;
+    width: 80rem;
+
+  }
+
+  .altimeter-container {
+    align-items: center;
+    width: 80rem;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    &.movable {
+      animation: rotateAltimeter 10s infinite alternate;
+    }
+  }
+
+  .altimeter-item {
+    display: flex;
+    height: 3.4rem;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    transform: rotate(162deg);
+
+    &.gold {
+      &::before,
+      &::after {
+        content:"";
+        height: 100%;
+        width: 14rem;
+        background-color: var(--salomie-color);
+      }
+      transform: rotate(126deg);
+    }
+
+    &.black-white {
+
+      &::before,
+      &::after {
+        content:"";
+        height: 100%;
+        width: 14rem;
+        background-color: var(--white-color);
+      }
+    }
+
+    &.black {
+      &::before,
+      &::after {
+        content: "";
+        height: 100%;
+        width: 14rem;
+        background: var(--midnight-color);
+      }
+    }
+
+    &.primary {
+      &::before,
+      &::after {
+        content: "";
+        height: 100%;
+        width: 14rem;
+        background: var(--primary-color);
+      }
+      transform: rotate(90deg);
+    }
+
+    &.primary-blue {
+      &::before{
+        background-color: var(--tertiary-color);
+        content: "";
+        height: 100%;
+        width: 14rem;
+      }
+      &::after {
+        background-color: var(--primary-color);
+        content: "";
+        height: 100%;
+        width: 14rem;
+      }
+
+      transform: rotate(198deg);
+    }
+  }
+}
+
+@keyframes rotateAltimeter {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(190deg);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
