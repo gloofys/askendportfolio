@@ -30,21 +30,32 @@
     padding: 0 6.4rem;
     bottom: 12rem;
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
   &__text {
-    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    justify-content: end;
+    z-index: 1;
 
     h1 {
-      font-size: 6.4rem;
-      color: var(--salomie-color);
+      font-size: 10.8rem;
+      color: var(--white-color);
       font-family: GT-Alpina, serif;
-      margin-bottom: 2rem;
+      letter-spacing: -.03em;
+      line-height: .95;
     }
 
     h4 {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
+      line-height: 1.4;
+      font-family: "Instrument Sans", sans-serif;
       color: var(--white-color);
       font-weight: 400;
+      margin-top: 3.2rem;
+      padding-right: 10rem;
     }
   }
 }
@@ -108,6 +119,7 @@
         width: 14rem;
         background-color: var(--white-color);
       }
+      transform: rotate(234deg);
     }
 
     &.black {
