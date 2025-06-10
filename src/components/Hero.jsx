@@ -4,7 +4,7 @@ const Hero = () => {
             <div className="hero__overlay" />
             <video
                 className="hero__video"
-                src="/Askendvideoloop.mp4"
+                src="/Askendvideo.mp4"
                 autoPlay
                 muted
                 loop
