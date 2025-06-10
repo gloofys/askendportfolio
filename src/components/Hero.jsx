@@ -9,6 +9,7 @@ const Hero = () => {
                 muted
                 loop
                 playsInline
+                poster="/askendVideoFirstFrame.png"
             />
             <div className="hero__content">
                 <div className="hero__text">
