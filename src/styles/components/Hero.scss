@@ -1,9 +1,14 @@
+@import '../mixins';
+
 .hero {
   position: relative;
   height: 56.25vw;
   overflow: hidden;
   width: 100%;
   display: flex;
+  @include respond(lg){
+    height: 100vh;
+  }
 
   &__video {
     position: absolute;
@@ -14,6 +19,14 @@
     transform: translateX(-50%);
     z-index: 0;
     object-fit: cover;
+
+    @include respond(lg) {
+      height: 100vh;
+      width: 177.78vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__overlay {
@@ -31,6 +44,19 @@
     bottom: 12rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    @include respond(lg) {
+      align-items: center;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 2.4rem;
+      bottom: 0;
+      height: calc(100vh - 4rem);
+      position: relative;
+    }
+    @include respond(xlg) {
+      bottom: 8rem;
+    }
   }
   &__text {
     display: flex;
@@ -39,13 +65,26 @@
     grid-column-end: span 5;
     justify-content: end;
     z-index: 1;
-
+    @include respond(lg) {
+      grid-column-start: 1;
+      grid-column-end: span 12;
+    }
     h1 {
       font-size: 10.8rem;
       color: var(--white-color);
       font-family: GT-Alpina, serif;
       letter-spacing: -.03em;
       line-height: .95;
+      @include respond(sm) {
+        max-width: 85%;
+      }
+      @include respond(kg) {
+        font-size: 6.4rem;
+        line-height: 1.1;
+      }
+      @include respond(xlg) {
+        font-size: 9.6rem;
+      }
     }
 
     h4 {
@@ -56,6 +95,11 @@
       font-weight: 400;
       margin-top: 3.2rem;
       padding-right: 10rem;
+      @include respond(sm) {
+        font-size: 2rem;
+        line-height: 1.4;
+        padding-right: 0;
+      }
     }
   }
 }
@@ -67,6 +111,31 @@
   grid-column-start: 6;
   grid-column-end: span 7;
   margin-top: 8rem;
+  @include respond-up(xs) {
+    top: -25vh;
+    transform: scale(.3);
+  }
+  @include respond-up(sm){
+    top: -10vh;
+    transform: scale(.4);
+  }
+  @include respond-up(md){
+    top: 0;
+    transform: scale(.7);
+  }
+  @include respond-up(lg){
+    grid-column-start: 1;
+    grid-column-end: span 12;
+    justify-self: start;
+    margin-top: 0;
+    position: absolute;
+    transform: scale(.6);
+  }
+  @include respond-up(xl) {
+    grid-column-start: 8;
+    grid-column-end: span 5;
+    transform: scale(.8);
+  }
 
   .altimeter-main-container {
     align-items: center;

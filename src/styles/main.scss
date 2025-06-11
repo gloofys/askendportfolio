@@ -5,9 +5,15 @@
 @use "./components/MyWork";
 @use "./components/ContactCallout";
 @use "./components/Hero";
+@use "./mixins" as*;
 
 html, body {
   height: 100%;
   margin: 0;
 }
-
+.app-layout{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}

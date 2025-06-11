@@ -5,51 +5,60 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="nav-container">
+        <div className="nav-menu">
+            <nav className="nav-container">
+                <a href="/" className="nav-logo">
+                    <img src="/AskendFredLogo.png" alt="Fred Brosman logo"/>
+                </a>
 
-            <div className={`nav-buttons-container ${menuOpen ? "open" : ""}`}>
-                <div className="nav-buttons-header">
-                    <a href="#" className="nav-logo">
-                        <img src="/AskendFredLogo.png" alt="Fred Brosman logo" />
-                    </a>
-                    <button className="nav-menu-close-btn" onClick={() => setMenuOpen(false)}>
-                        <img src="/icons/close-btn.svg" alt="Close menu" />
-                    </button>
-                </div>
-
-                <nav className="nav-buttons">
-                    <a
-                        href="https://linkedin.com/in/fred-brosman"
-                        className="btn btn--secondary btn--icon"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                {/* Desktop Buttons */}
+                <div className="nav-buttons-desktop">
+                    <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer"
+                       className="btn btn--secondary btn--icon">
                         <i className="devicon-linkedin-plain"></i> LinkedIn
                     </a>
-                    <a
-                        href="https://github.com/gloofys"
-                        className="btn btn--secondary btn--icon"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/gloofys" target="_blank" rel="noreferrer"
+                       className="btn btn--secondary btn--icon">
                         <i className="devicon-github-original"></i> GitHub
                     </a>
-                    <a
-                        href="/cv_fred_brosman.pdf"
-                        className="btn btn--primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                         Curriculum Vitae
+                    <a href="/https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer" className="btn btn--primary">
+                        Curriculum Vitae
                     </a>
-                </nav>
-            </div>
+                </div>
 
-            <button className="nav-menu-icon" onClick={() => setMenuOpen(true)}>
-                <img src="/icons/burger-menu.svg" alt="Open menu"/>
-            </button>
-        </nav>
-    );
-};
+                {/* Burger Icon */}
+                <button className="nav-menu-icon" onClick={() => setMenuOpen(true)}>
+                    <img src="/burger-menu.svg" alt="Open menu"/>
+                </button>
 
-export default Header;
+                {/* Mobile Slide-in Menu */}
+                <div className={`nav-buttons-container ${menuOpen ? "open" : ""}`}>
+                    <div className="nav-buttons-header">
+                        <a href="/" className="nav-logo">
+                            <img src="/AskendFredLogo.png" alt="Fred Brosman logo"/>
+                        </a>
+                        <button className="nav-menu-close-btn" onClick={() => setMenuOpen(false)}>
+                            <img src="/close-btn.svg" alt="Close menu"/>
+                        </button>
+                    </div>
+
+                    <nav className="nav-buttons">
+                        <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer"
+                           className="btn btn--secondary btn--icon">
+                            <i className="devicon-linkedin-plain"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/gloofys" target="_blank" rel="noreferrer"
+                           className="btn btn--secondary btn--icon">
+                            <i className="devicon-github-original"></i> GitHub
+                        </a>
+                        <a href="/https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer" className="btn btn--primary">
+                            Curriculum Vitae
+                        </a>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+            );
+            };
+
+            export default Header;
