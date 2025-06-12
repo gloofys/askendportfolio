@@ -1,23 +1,12 @@
 @import '../mixins';
 
-.app-layout {
-
-  .nav-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-}
-.pw-nav-menu {
+.nav-menu {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; // On top of video
+  z-index: 10;
 }
-
 
 .nav-container {
   position: relative;
@@ -25,7 +14,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 3.2rem;
-  z-index: 2;
 
   .nav-logo img {
     height: 4rem;
@@ -38,6 +26,10 @@
 
     img {
       height: 3.2rem;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
     }
   }
 
@@ -64,28 +56,21 @@
     }
   }
 
-  .nav-buttons-container {
+  .nav-buttons-mobile {
     display: none;
-  }
 
-  @media (max-width: 768px) {
-    .nav-menu-icon {
-      display: block;
-    }
-
-    .nav-buttons-container {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      padding: 3.2rem 2.4rem;
+      width: calc(100% - 4.8rem);
       background: var(--primary-color);
+      padding: 0 2.4rem 4rem 2.4rem;
       transform: translateY(-100%);
-      transition: transform 0.4s ease;
+      transition: all 0.4s ease-in-out;
 
       &.open {
         transform: translateY(0);
@@ -94,8 +79,7 @@
       .nav-buttons-header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 4rem;
+        padding: 3.2rem 0;
 
         .nav-logo img {
           height: 3rem;
@@ -111,15 +95,27 @@
         }
       }
 
+
       .nav-buttons {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        width: 100%;
 
         a {
           color: var(--midnight-color);
-          font-size: 1.8rem;
           text-decoration: none;
+          font-size: 1.8rem;
+
+          &.btn--secondary {
+            color: var(--white-color);
+            border-color: var(--white-color);
+          }
+          &.btn--primary {
+            color: var(--primary-color);
+            border-color: var(--white-color);
+            background-color: var(--white-color);
+            justify-content: center;
+          }
 
           i {
             margin-right: 1rem;
@@ -128,6 +124,9 @@
           &:hover {
             color: var(--salomie-color);
           }
+        }
+        a:not(:last-child) {
+          margin-bottom: 1.6rem;
         }
       }
     }

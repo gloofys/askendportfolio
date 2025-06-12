@@ -8,10 +8,10 @@ const Header = () => {
         <div className="nav-menu">
             <nav className="nav-container">
                 <a href="/" className="nav-logo">
-                    <img src="/AskendFredLogo.png" alt="Fred Brosman logo"/>
+                    <img src="/AskendFredLogo.png" alt="Fred Brosman logo" />
                 </a>
 
-                {/* Desktop Buttons */}
+                {/* Desktop Links */}
                 <div className="nav-buttons-desktop">
                     <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer"
                        className="btn btn--secondary btn--icon">
@@ -21,24 +21,25 @@ const Header = () => {
                        className="btn btn--secondary btn--icon">
                         <i className="devicon-github-original"></i> GitHub
                     </a>
-                    <a href="/https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer" className="btn btn--primary">
+                    <a href="https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer"
+                       className="btn btn--primary">
                         Curriculum Vitae
                     </a>
                 </div>
 
-                {/* Burger Icon */}
+                {/* Burger Button */}
                 <button className="nav-menu-icon" onClick={() => setMenuOpen(true)}>
-                    <img src="/burger-menu.svg" alt="Open menu"/>
+                    <img src="/burger-menu.svg" alt="Open menu" />
                 </button>
 
                 {/* Mobile Slide-in Menu */}
-                <div className={`nav-buttons-container ${menuOpen ? "open" : ""}`}>
+                <div className={`nav-buttons-mobile ${menuOpen ? "open" : ""}`}>
                     <div className="nav-buttons-header">
                         <a href="/" className="nav-logo">
-                            <img src="/AskendFredLogo.png" alt="Fred Brosman logo"/>
+                            <img src="/AskendFredLogo.png" alt="Fred Brosman logo" />
                         </a>
                         <button className="nav-menu-close-btn" onClick={() => setMenuOpen(false)}>
-                            <img src="/close-btn.svg" alt="Close menu"/>
+                            <img src="/close-btn.svg" alt="Close menu" />
                         </button>
                     </div>
 
@@ -51,14 +52,15 @@ const Header = () => {
                            className="btn btn--secondary btn--icon">
                             <i className="devicon-github-original"></i> GitHub
                         </a>
-                        <a href="/https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer" className="btn btn--primary">
+                        <a href="https://drive.google.com/file/d/1aUr9iR7RXMLaJLjzofdVfHDISMH_Kj4T/view" target="_blank" rel="noreferrer"
+                           className="btn btn--primary">
                             Curriculum Vitae
                         </a>
                     </nav>
                 </div>
             </nav>
         </div>
-            );
-            };
+    );
+};
 
-            export default Header;
+export default Header;
