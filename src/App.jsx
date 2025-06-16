@@ -10,13 +10,15 @@ import Header from "./components/Header.jsx";
 const App = () => {
     return (
         <div className="app-layout">
-            <main>
+
                 <Header/>
-                <Hero />
-                <WhatSetsMeApart/>
-                <MyWork/>
-                <ContactCallout/>
-            </main>
+                <div className="app-content">
+                    <Hero/>
+                    <WhatSetsMeApart/>
+                    <MyWork/>
+                    <ContactCallout/>
+                </div>
+
             <Footer/>
         </div>
     );

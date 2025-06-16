@@ -1,4 +1,4 @@
-@import '../mixins';
+@use "../variables" as *;
 
 .hero {
   position: relative;
@@ -6,9 +6,6 @@
   overflow: hidden;
   width: 100%;
   display: flex;
-  @include respond(lg){
-    height: 100vh;
-  }
 
   &__video {
     position: absolute;
@@ -19,14 +16,6 @@
     transform: translateX(-50%);
     z-index: 0;
     object-fit: cover;
-
-    @include respond(lg) {
-      height: 100vh;
-      width: 177.78vh;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 
   &__overlay {
@@ -45,192 +34,231 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
-    @include respond(lg) {
+    & .hero__text {
+      display: flex;
+      flex-direction: column;
+      grid-column-start: 1;
+      grid-column-end: span 5;
+      justify-content: end;
+      z-index: 1;
+
+      h1 {
+        font-size: 10.8rem;
+        color: var(--white-color);
+        font-family: GT-Alpina, serif;
+        letter-spacing: -0.03em;
+        line-height: 0.95;
+      }
+
+      h4 {
+        font-size: 2.2rem;
+        line-height: 1.4;
+        font-family: "Instrument Sans", sans-serif;
+        color: var(--white-color);
+        font-weight: 400;
+        margin-top: 3.2rem;
+        padding-right: 10rem;
+      }
+    }
+
+    // Altimeter block
+    .altimeter {
+      align-items: end;
+      display: flex;
+      flex-direction: column;
+      grid-column-start: 6;
+      grid-column-end: span 7;
+      margin-top: 8rem;
+
+      &-main-container {
+        align-items: center;
+        display: flex;
+        height: 80rem;
+        justify-content: center;
+        position: relative;
+        width: 80rem;
+      }
+
+      &-container {
+        align-items: center;
+        width: 80rem;
+        height: 80rem;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        &.movable {
+          animation: rotateAltimeter 10s infinite alternate;
+        }
+      }
+
+      &-item {
+        display: flex;
+        height: 3.4rem;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        transform: rotate(162deg);
+
+        &.gold {
+          &::before,
+          &::after {
+            content: "";
+            height: 100%;
+            width: 14rem;
+            background-color: var(--salomie-color);
+          }
+
+          transform: rotate(126deg);
+        }
+
+        &.black-white {
+          &::before,
+          &::after {
+            content: "";
+            height: 100%;
+            width: 14rem;
+            background-color: var(--white-color);
+          }
+
+          transform: rotate(234deg);
+        }
+
+        &.black {
+          &::before,
+          &::after {
+            content: "";
+            height: 100%;
+            width: 14rem;
+            background: var(--midnight-color);
+          }
+        }
+
+        &.primary {
+          &::before,
+          &::after {
+            content: "";
+            height: 100%;
+            width: 14rem;
+            background: var(--primary-color);
+          }
+
+          transform: rotate(90deg);
+        }
+
+        &.primary-blue {
+          &::before {
+            background-color: var(--tertiary-color);
+            content: "";
+            height: 100%;
+            width: 14rem;
+          }
+
+          &::after {
+            background-color: var(--primary-color);
+            content: "";
+            height: 100%;
+            width: 14rem;
+          }
+
+          transform: rotate(198deg);
+        }
+      }
+    }
+  }
+
+  // Media Queries: max-width (desktop-first)
+  @media (max-width: $bp-xl) {
+    .hero__text h1 {
+      font-size: 9.6rem;
+    }
+
+    .hero__content .altimeter {
+      grid-column-start: 8;
+      grid-column-end: span 5;
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: $bp-xlg) {
+    .hero__content {
+      bottom: 8rem;
+    }
+  }
+
+  @media (max-width: $bp-lg) {
+    height: 100vh;
+
+    .hero__video {
+      height: 100vh;
+      width: 177.78vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero__content{
+      position: relative;
+      height: calc(100vh - 4rem);
+      bottom: 0;
       align-items: center;
       display: flex;
       flex-direction: column-reverse;
       padding: 0 2.4rem;
-      bottom: 0;
-      height: calc(100vh - 4rem);
-      position: relative;
     }
-    @include respond(xlg) {
-      bottom: 8rem;
-    }
-  }
-  &__text {
-    display: flex;
-    flex-direction: column;
-    grid-column-start: 1;
-    grid-column-end: span 5;
-    justify-content: end;
-    z-index: 1;
-    @include respond(lg) {
+
+    .hero__text {
       grid-column-start: 1;
       grid-column-end: span 12;
-    }
-    h1 {
-      font-size: 10.8rem;
-      color: var(--white-color);
-      font-family: GT-Alpina, serif;
-      letter-spacing: -.03em;
-      line-height: .95;
-      @include respond(sm) {
-        max-width: 85%;
-      }
-      @include respond(kg) {
+
+      h1 {
         font-size: 6.4rem;
         line-height: 1.1;
       }
-      @include respond(xlg) {
-        font-size: 9.6rem;
-      }
     }
 
-    h4 {
-      font-size: 2.2rem;
+    .hero__content .altimeter {
+      grid-column-start: 1;
+      grid-column-end: span 12;
+      justify-self: start;
+      margin-top: 0;
+      position: absolute;
+      transform: scale(0.6);
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    .hero__content .altimeter {
+      top: 0;
+      transform: scale(0.7);
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    .hero__text h4 {
+      font-size: 2rem;
       line-height: 1.4;
-      font-family: "Instrument Sans", sans-serif;
-      color: var(--white-color);
-      font-weight: 400;
-      margin-top: 3.2rem;
-      padding-right: 10rem;
-      @include respond(sm) {
-        font-size: 2rem;
-        line-height: 1.4;
-        padding-right: 0;
-      }
+      padding-right: 0;
+    }
+
+    .hero__text h1 {
+      max-width: 85%;
+    }
+
+    .hero__content .altimeter {
+      top: -10vh;
+      transform: scale(0.4);
+    }
+  }
+
+  @media (max-width: $bp-xs) {
+    .hero__content .altimeter {
+      top: -25vh;
+      transform: scale(0.3);
     }
   }
 }
 
-.altimeter {
-  align-items: end;
-  display: flex;
-  flex-direction: column;
-  grid-column-start: 6;
-  grid-column-end: span 7;
-  margin-top: 8rem;
-  @include respond-up(xs) {
-    top: -25vh;
-    transform: scale(.3);
-  }
-  @include respond-up(sm){
-    top: -10vh;
-    transform: scale(.4);
-  }
-  @include respond-up(md){
-    top: 0;
-    transform: scale(.7);
-  }
-  @include respond-up(lg){
-    grid-column-start: 1;
-    grid-column-end: span 12;
-    justify-self: start;
-    margin-top: 0;
-    position: absolute;
-    transform: scale(.6);
-  }
-  @include respond-up(xl) {
-    grid-column-start: 8;
-    grid-column-end: span 5;
-    transform: scale(.8);
-  }
-
-  .altimeter-main-container {
-    align-items: center;
-    display: flex;
-    height: 80rem;
-    justify-content: center;
-    position: relative;
-    width: 80rem;
-
-  }
-
-  .altimeter-container {
-    align-items: center;
-    width: 80rem;
-    height: 80rem;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-
-    &.movable {
-      animation: rotateAltimeter 10s infinite alternate;
-    }
-  }
-
-  .altimeter-item {
-    display: flex;
-    height: 3.4rem;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    transform: rotate(162deg);
-
-    &.gold {
-      &::before,
-      &::after {
-        content:"";
-        height: 100%;
-        width: 14rem;
-        background-color: var(--salomie-color);
-      }
-      transform: rotate(126deg);
-    }
-
-    &.black-white {
-
-      &::before,
-      &::after {
-        content:"";
-        height: 100%;
-        width: 14rem;
-        background-color: var(--white-color);
-      }
-      transform: rotate(234deg);
-    }
-
-    &.black {
-      &::before,
-      &::after {
-        content: "";
-        height: 100%;
-        width: 14rem;
-        background: var(--midnight-color);
-      }
-    }
-
-    &.primary {
-      &::before,
-      &::after {
-        content: "";
-        height: 100%;
-        width: 14rem;
-        background: var(--primary-color);
-      }
-      transform: rotate(90deg);
-    }
-
-    &.primary-blue {
-      &::before{
-        background-color: var(--tertiary-color);
-        content: "";
-        height: 100%;
-        width: 14rem;
-      }
-      &::after {
-        background-color: var(--primary-color);
-        content: "";
-        height: 100%;
-        width: 14rem;
-      }
-
-      transform: rotate(198deg);
-    }
-  }
-}
-
+// Animation
 @keyframes rotateAltimeter {
   0% {
     transform: rotate(0deg);
