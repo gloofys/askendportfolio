@@ -3,12 +3,13 @@
   background-image: url("/workdesk-back.png");
   background-size: cover;
   background-position: center;
-  height:100%;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 2rem;
-  min-height: 80vh;
+  padding: 24rem 0;
+  @media (max-width: 768px){
+    background-repeat: no-repeat;
+  }
 
   .contact-callout__overlay {
     position: absolute;
@@ -24,6 +25,11 @@
     grid-column-start: 4;
     grid-column-end: span 6;
     padding: 24rem 0;
+
+    @media (max-width: 768px){
+      grid-column: 1 / span 12;
+      padding: 0 2.4rem;
+    }
 
     h2 {
       font-size: 6.4rem;
