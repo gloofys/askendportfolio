@@ -6,6 +6,12 @@
   grid-template-rows: 1fr;
   grid-column-gap: 3.2rem;
 
+  @media (max-width: 768px) {
+    grid-column: 1 / span 12;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 3.2rem 2.4rem;
+  }
+
   &__note {
     display: flex;
     flex-direction: column;
@@ -14,6 +20,13 @@
     justify-content: flex-start;
     color: var(--midnight-color);
     line-height: 1.4;
+
+    @media (max-width: 768px) {
+      grid-column: 1 / span 12;
+    }
+    @media (max-width: 960px) {
+      order: 2;
+    }
 
     .footer__label {
       font-weight: 600;
@@ -46,6 +59,10 @@
     position: relative; // needed for absolute positioning of pseudo-elements
     display: flex;
     align-items: flex-start;
+
+    @media (max-width: 768px) {
+      grid-column: 1 / span 12;
+    }
 
     img {
       max-width: 100%;
@@ -111,6 +128,13 @@
   &__contact {
     display: flex;
     align-items: flex-start;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      grid-column: 1 / span 12;
+      margin: 6.4rem 0;
+      order: 1;
+    }
 
     .footer__label {
       font-weight: 700;
