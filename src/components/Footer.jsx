@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
 
 
-            <div className="footer__nav">
+            <div className="footer__nav hidden-xs">
                 <h4 className="footer__label">Navigation</h4>
                 <ul>
                     <li><a href="#about">About</a></li>
