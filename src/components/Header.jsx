@@ -8,7 +8,7 @@ const Header = () => {
         <div className="nav-menu">
             <nav className="nav-container">
                 <a href="/" className="nav-logo">
-                    <img src="/AskendFredLogo.png" alt="Fred Brosman logo" />
+                    <img src="/AskendFredLogowhite.png" alt="Fred Brosman logo" />
                 </a>
 
                 {/* Desktop Links */}
@@ -36,7 +36,7 @@ const Header = () => {
                 <div className={`nav-buttons-mobile ${menuOpen ? "open" : ""}`}>
                     <div className="nav-buttons-header">
                         <a href="/" className="nav-logo">
-                            <img src="/AskendFredLogo.png" alt="Fred Brosman logo" />
+                            <img src="/AskendFredLogowhite.png" alt="Fred Brosman logo" />
                         </a>
                         <button className="nav-menu-close-btn" onClick={() => setMenuOpen(false)}>
                             <img src="/close-btn.svg" alt="Close menu" />
