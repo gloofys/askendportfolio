@@ -13,9 +13,9 @@ const Hero = () => {
             />
             <div className="hero__content">
                 <div className="hero__text">
-                    <h1>Ain’t no mountain high enough</h1>
+                    <h1>Code that moves mountains</h1>
                     <h4>
-                        Building secure digital services that hold up to the challenges the future might bring.
+                        Bringing robust, well-crafted solutions — ready to help your company conquer its next challenge.
                     </h4>
                 </div>
                 <div className="altimeter">

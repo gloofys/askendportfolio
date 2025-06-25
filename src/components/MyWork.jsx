@@ -54,8 +54,7 @@ const MyWork = () => {
                 <div className="my-work__title">
                     <h2 className="card__title card__title--gold">Tech Stack & Latest Projects</h2>
                     <p>
-                        Here are the core technologies I use — <span className="highlight-text">education, finance, and e-services</span> and
-                        the projects where I’ve applied them with purpose.
+                        Here are the core technologies I use <span className="highlight-text">and the hands-on experience I’ve built up along the way</span> showcased in the projects where I’ve applied them.
                     </p>
                 </div>
                 <div className="tech-icons">
