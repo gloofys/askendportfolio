@@ -4,26 +4,26 @@ import "../styles/components/MyWork.scss";
 
 const projects = [
     {
-        title: "Flight Planner App",
-        subTitle: "React + Spring Boot",
-        description: "Search flights, filter results, and recommend seats based on availability and comfort.",
+        title: "Opacity Puzzle Game",
+        subTitle: "React + tailwind",
+        description: "A dynamic puzzle game where each piece's opacity changes based on its proximity to the correct position, offering visual cues to guide players.",
         image: "/puzzlepurplebg_square.png",
     },
     {
-        title: "Loan Decision Engine",
-        subTitle: "Spring Boot + PostgreSQL",
-        description: "Calculates credit scores and loan eligibility with business rule logic.",
+        title: "Rental Property Website",
+        subTitle: "Vue.js",
+        description: "Webpage for a rental property in Hungary.",
         image: "/badacsony_webpage_screenshot_square.png",
     },
     {
         title: "Flight Planner App",
-        subTitle: "Spring Boot + PostgreSQL",
-        description: "Calculates credit scores and loan eligibility with business rule logic.",
+        subTitle: "Spring Boot + PostgreSQL + React",
+        description: "Search flights, filter results, and filter seats based on availability and location.",
         image: "/plane-icon-square.png",
     },
     {
         title: "Typing Code Game",
-        subTitle: "React + TypeScript",
+        subTitle: "Node.js + React + TypeScript",
         description: "Practice typing code snippets from real languages and track your accuracy & speed.",
         image: "/syntax_logo_goldbg_square.png",
     },
@@ -50,7 +50,7 @@ const courses = [
 const MyWork = () => {
     return (
         <>
-            <section className="my-work-section card card--dark">
+            <section className="my-work-section card card--dark" id="projects">
                 <div className="my-work__title">
                     <h2 className="card__title card__title--gold">Tech Stack & Latest Projects</h2>
                     <p>

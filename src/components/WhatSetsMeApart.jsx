@@ -25,7 +25,7 @@ const cards = [
 
 const WhatSetsMeApart = () => {
     return (
-        <section className="what-sets-me-apart" id="unique">
+        <section className="what-sets-me-apart" id="about">
             <h3 className="section-title">What sets me apart</h3>
             <div className="cards-row">
                 {cards.map((card, i) => (

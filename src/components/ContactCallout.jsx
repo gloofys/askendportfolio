@@ -3,7 +3,7 @@ import "../styles/components/ContactCallout.scss";
 
 const ContactCallout = () => {
     return (
-        <section className="contact-callout">
+        <section className="contact-callout" id="contact">
             <div className="contact-callout__overlay"/>
             <div className="contact-callout__content">
                 <h2>Let’s build something great together.</h2>

@@ -20,9 +20,9 @@ const Footer = () => {
             <div className="footer__nav hidden-xs">
                 <h4 className="footer__label">Navigation</h4>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#courses">Courses</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -31,9 +31,7 @@ const Footer = () => {
                 <h4 className="footer__label">Contact</h4>
                 <ul className="footer__contact-list">
                     <li>Tallinn, Estonia</li>
-                    <li>
-                        <a href="mailto:fred.brosman06@gmail.com">fred.brosman06@gmail.com</a>
-                    </li>
+                    <li>fred.brosman06@gmail.com</li>
                     <li className="footer__socials">
                         <a href="https://linkedin.com/in/fred-brosman" target="_blank" rel="noreferrer">
                             <i className="devicon-linkedin-plain"></i>
