@@ -106,7 +106,9 @@
 
   .article {
     background: var(--midnight-color);
-    border-radius: 3.2rem;
+    -moz-border-radius-topleft: 3.2rem;
+    -moz-border-radius-topright: 3.2rem;
+    -moz-border-radius-bottomleft: 0;
     overflow: hidden;
     transition: transform 0.4s ease-in-out;
 
@@ -152,6 +154,10 @@
       font-size: 1.8rem;
       line-height: 1.5;
       margin-bottom: 2.4rem;
+    }
+    &__link{
+      color: var(--white-color);
+      text-decoration: underline;
     }
   }
 }

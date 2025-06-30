@@ -8,24 +8,32 @@ const projects = [
         subTitle: "React + tailwind",
         description: "A dynamic puzzle game where each piece's opacity changes based on its proximity to the correct position, offering visual cues to guide players.",
         image: "/puzzlepurplebg_square.png",
+        certificateUrl:"https://opacitypuzzle.vercel.app",
+        linkDescription:"Visit Website(desktop only)"
     },
     {
         title: "Rental Property Website",
         subTitle: "Vue.js",
         description: "Webpage for a rental property in Hungary.",
         image: "/badacsony_webpage_screenshot_square.png",
+        certificateUrl:"https://badacsony.vercel.app",
+        linkDescription:"Visit Website"
     },
     {
         title: "Flight Planner App",
         subTitle: "Spring Boot + PostgreSQL + React",
         description: "Search flights, filter results, and filter seats based on availability and location.",
         image: "/plane-icon-square.png",
+        certificateUrl:"https://github.com/gloofys/flight-planner",
+        linkDescription:"Github Repository"
     },
     {
         title: "Typing Code Game",
         subTitle: "Node.js + React + TypeScript",
         description: "Practice typing code snippets from real languages and track your accuracy & speed.",
         image: "/syntax_logo_goldbg_square.png",
+        certificateUrl:"https://github.com/gloofys/syntaxtyper",
+        linkDescription:"Github Repository"
     },
 ];
 
@@ -87,6 +95,14 @@ const MyWork = () => {
                             <p className="article__sub-title top">{proj.subTitle}</p>
                             <h4 className="article__title">{proj.title}</h4>
                             <p className="article__description">{proj.description}</p>
+                            <a
+                                href={proj.certificateUrl}
+                                className="article__link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {proj.linkDescription}
+                            </a>
                         </div>
                     ))}
                 </div>
