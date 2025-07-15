@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer grid">
             {/* Column 1: Logo */}
             <div className="footer__brand">
-                <img src="/FLogosmallWhite.png" alt="Fred Brosman Logo" />
+                <img src="/FLogoSmallBlack.png" alt="Fred Brosman Logo" />
             </div>
 
             <div className="footer__note">
